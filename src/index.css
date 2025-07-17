@@ -2,39 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Retro-tech portfolio design system with neon accents and dark theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark retro theme */
+    --background: 220 13% 8%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 13% 10%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 13% 10%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Neon primary - electric blue */
+    --primary: 199 89% 48%;
+    --primary-foreground: 220 13% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Neon secondary - teal */
+    --secondary: 180 100% 50%;
+    --secondary-foreground: 220 13% 8%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted dark grays */
+    --muted: 220 13% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Neon accent - purple */
+    --accent: 280 100% 70%;
+    --accent-foreground: 220 13% 8%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 13% 20%;
+    --input: 220 13% 15%;
+    --ring: 199 89% 48%;
+
+    /* Neon colors */
+    --neon-green: 120 100% 50%;
+    --neon-pink: 320 100% 50%;
+    --neon-orange: 30 100% 50%;
+    --neon-yellow: 60 100% 50%;
+
+    /* Glows */
+    --glow-primary: 199 89% 48%;
+    --glow-secondary: 180 100% 50%;
+    --glow-accent: 280 100% 70%;
+
+    /* Gradients */
+    --gradient-retro: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-neon: linear-gradient(90deg, hsl(var(--neon-green)), hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-bg: linear-gradient(180deg, hsl(var(--background)), hsl(220 13% 5%));
+
+    /* Shadows and glows */
+    --shadow-neon: 0 0 20px hsl(var(--glow-primary) / 0.5);
+    --shadow-accent: 0 0 30px hsl(var(--glow-accent) / 0.4);
+    --shadow-card: 0 8px 32px hsl(220 13% 3% / 0.4);
+
+    /* Animations */
+    --transition-neon: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: box-shadow 0.3s ease;
 
     --radius: 0.5rem;
 
@@ -100,6 +128,156 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-mono;
+    background: var(--gradient-bg);
   }
+}
+
+@layer components {
+  /* Retro-tech utility classes */
+  .neon-glow {
+    box-shadow: var(--shadow-neon);
+    transition: var(--transition-glow);
+  }
+
+  .neon-glow:hover {
+    box-shadow: 0 0 40px hsl(var(--glow-primary) / 0.8);
+  }
+
+  .accent-glow {
+    box-shadow: var(--shadow-accent);
+    transition: var(--transition-glow);
+  }
+
+  .accent-glow:hover {
+    box-shadow: 0 0 50px hsl(var(--glow-accent) / 0.6);
+  }
+
+  .text-neon {
+    color: hsl(var(--primary));
+    text-shadow: 0 0 10px hsl(var(--glow-primary) / 0.5);
+  }
+
+  .text-accent-neon {
+    color: hsl(var(--accent));
+    text-shadow: 0 0 10px hsl(var(--glow-accent) / 0.5);
+  }
+
+  .text-secondary-neon {
+    color: hsl(var(--secondary));
+    text-shadow: 0 0 10px hsl(var(--glow-secondary) / 0.5);
+  }
+
+  .border-neon {
+    border-color: hsl(var(--primary));
+    box-shadow: inset 0 0 10px hsl(var(--glow-primary) / 0.2);
+  }
+
+  .bg-neon-gradient {
+    background: var(--gradient-neon);
+  }
+
+  .bg-retro-gradient {
+    background: var(--gradient-retro);
+  }
+
+  .glitch-text {
+    position: relative;
+  }
+
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .glitch-text::before {
+    animation: glitch-1 0.5s infinite;
+    color: hsl(var(--neon-pink));
+    z-index: -1;
+  }
+
+  .glitch-text::after {
+    animation: glitch-2 0.5s infinite;
+    color: hsl(var(--secondary));
+    z-index: -2;
+  }
+
+  .pixel-perfect {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+
+  .scan-lines {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scan-lines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 255, 0.03) 2px,
+      rgba(0, 255, 255, 0.03) 4px
+    );
+    pointer-events: none;
+  }
+}
+
+@layer utilities {
+  .font-pixel {
+    font-family: 'Courier New', 'Monaco', 'Lucida Console', monospace;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+}
+
+@keyframes glitch-1 {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(-2px); }
+  60% { transform: translateX(2px); }
+  80% { transform: translateX(2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(-2px); }
+}
+
+@keyframes neon-pulse {
+  0%, 100% { 
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  50% { 
+    text-shadow: 0 0 2px currentColor, 0 0 5px currentColor, 0 0 8px currentColor;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }

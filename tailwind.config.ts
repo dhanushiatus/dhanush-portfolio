@@ -61,7 +61,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				neon: {
+					green: 'hsl(var(--neon-green))',
+					pink: 'hsl(var(--neon-pink))',
+					orange: 'hsl(var(--neon-orange))',
+					yellow: 'hsl(var(--neon-yellow))'
 				}
+			},
+			fontFamily: {
+				pixel: ['Courier New', 'Monaco', 'Lucida Console', 'monospace'],
+				mono: ['JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

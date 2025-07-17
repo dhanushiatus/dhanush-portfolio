@@ -6,7 +6,7 @@ const Hero = () => {
   const roles = ["Data scientist", "Data analyst", "Android developer"];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [hackerText, setHackerText] = useState("");
-  const targetText = "hacker";
+  const targetText = "HI, I'M JAGAPATHY DHANUSHKAR, A...";
 
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 

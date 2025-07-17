@@ -5,6 +5,33 @@ import { useState, useEffect } from "react";
 const Hero = () => {
   const roles = ["Data scientist", "Data analyst", "Android developer"];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [hackerText, setHackerText] = useState("");
+  const targetText = "hacker";
+
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  useEffect(() => {
+    let iteration = 0;
+    const interval = setInterval(() => {
+      setHackerText(targetText
+        .split("")
+        .map((letter, index) => {
+          if (index < iteration) {
+            return targetText[index];
+          }
+          return letters[Math.floor(Math.random() * 26)];
+        })
+        .join(""));
+      
+      if (iteration >= targetText.length) {
+        clearInterval(interval);
+      }
+      
+      iteration += 1 / 3;
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,7 +47,7 @@ const Hero = () => {
           {/* Content */}
           <div className="space-y-6">
             <div className="font-pixel text-sm text-muted-foreground">
-              // hacker
+              // {hackerText}
             </div>
             
             <div className="space-y-2">

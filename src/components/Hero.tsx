@@ -60,7 +60,7 @@ const Hero = () => {
               <h2 className="text-2xl md:text-4xl font-bold animate-fade-in" style={{ animationDelay: '0.8s' }}>
                 <span className="text-foreground transition-all duration-300 hover:text-neon">{"{ "}</span>
                 <span className="text-secondary-neon transition-all duration-700 ease-in-out transform">
-                  "__{roles[currentRoleIndex]}"
+                  "__Want to be {roles[currentRoleIndex]}"
                 </span>
                 <span className="text-foreground transition-all duration-300 hover:text-neon">" {"}"}</span>
               </h2>

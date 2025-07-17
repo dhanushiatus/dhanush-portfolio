@@ -1,7 +1,18 @@
 import { Github, Linkedin, Download, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const roles = ["Data scientist", "Data analyst", "Android developer"];
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 scan-lines">
       <div className="container mx-auto px-4">
@@ -9,7 +20,7 @@ const Hero = () => {
           {/* Content */}
           <div className="space-y-6">
             <div className="font-pixel text-sm text-muted-foreground">
-              // HI, I'M JAGAPATHY DHANUSHKAR, A...
+              // hacker
             </div>
             
             <div className="space-y-2">
@@ -21,7 +32,9 @@ const Hero = () => {
               </h1>
               <h2 className="text-2xl md:text-4xl font-bold">
                 <span className="text-foreground">{"{ "}</span>
-                <span className="text-secondary-neon">"_fullstack Developer"</span>
+                <span className="text-secondary-neon transition-all duration-500">
+                  "__{roles[currentRoleIndex]}"
+                </span>
                 <span className="text-foreground">" {"}"}</span>
               </h2>
             </div>

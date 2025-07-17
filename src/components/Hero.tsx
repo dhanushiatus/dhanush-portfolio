@@ -114,7 +114,7 @@ const Hero = () => {
             <div className="relative group">
               <div className="w-80 h-80 rounded-full border-4 border-neon neon-glow overflow-hidden animate-float transition-all duration-500 group-hover:scale-105 group-hover:border-accent">
               <img
-                  src="https://i.postimg.cc/50gmpjyQ/profpicf.jpg"
+                  src="https://i.postimg.cc/50gmpjyQ/profpic.jpg"
                   alt="Jagapathy Dhanushkar"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />

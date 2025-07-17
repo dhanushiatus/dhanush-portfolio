@@ -113,8 +113,8 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '1.6s' }}>
             <div className="relative group">
               <div className="w-80 h-80 rounded-full border-4 border-neon neon-glow overflow-hidden animate-float transition-all duration-500 group-hover:scale-105 group-hover:border-accent">
-                <img
-                  src="/lovable-uploads/3fa19740-fc70-488a-bef7-ba4a6fd882f3.png"
+              <img
+                  src="https://i.postimg.cc/50gmpjyQ/profpicf.jpg"
                   alt="Jagapathy Dhanushkar"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />

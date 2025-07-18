@@ -5,12 +5,20 @@ import { Button } from "@/components/ui/button";
 const Certificates = () => {
   const certificates = [
     {
+      title: "Esoft DiTec",
+      issuer: "Esoft Metro Campus",
+      date: "2023",
+      description: "Diploma in Information Technology covering comprehensive IT fundamentals and practical skills",
+      skills: ["Information Technology", "Programming", "Database Management", "Networking"],
+      color: "neon"
+    },
+    {
       title: "IBM Data Science Professional Certificate",
       issuer: "IBM",
       date: "2024",
       description: "Comprehensive program covering data science methodology, tools, and techniques",
       skills: ["Python", "Data Analysis", "Machine Learning", "SQL"],
-      color: "neon"
+      color: "accent"
     },
     {
       title: "AI Product Management Specialization",
@@ -18,7 +26,7 @@ const Certificates = () => {
       date: "2024",
       description: "Strategic approach to AI product development and management",
       skills: ["AI Strategy", "Product Management", "Ethics in AI"],
-      color: "accent"
+      color: "secondary"
     },
     {
       title: "Fundamentals of Machine Learning and AI",
@@ -26,7 +34,7 @@ const Certificates = () => {
       date: "2023",
       description: "Core concepts and applications of ML and artificial intelligence",
       skills: ["Machine Learning", "Neural Networks", "Deep Learning"],
-      color: "secondary"
+      color: "neon-green"
     },
     {
       title: "Google Ads for Beginners",
@@ -34,7 +42,7 @@ const Certificates = () => {
       date: "2023",
       description: "Digital marketing fundamentals and Google Ads platform mastery",
       skills: ["Digital Marketing", "Google Ads", "Analytics"],
-      color: "neon-green"
+      color: "accent"
     },
     {
       title: "Excel for Data Analysis",
@@ -42,7 +50,7 @@ const Certificates = () => {
       date: "2023",
       description: "Advanced Excel techniques for data analysis and visualization",
       skills: ["Excel", "Data Visualization", "Statistical Analysis"],
-      color: "accent"
+      color: "secondary"
     },
     {
       title: "Project Management with ClickUp",
@@ -50,7 +58,7 @@ const Certificates = () => {
       date: "2023",
       description: "Modern project management methodologies and tools",
       skills: ["Project Management", "Agile", "Team Collaboration"],
-      color: "secondary"
+      color: "neon-green"
     }
   ];
 
@@ -158,11 +166,11 @@ const Certificates = () => {
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
-            <div className="text-3xl font-bold font-pixel text-neon mb-2">6+</div>
+            <div className="text-3xl font-bold font-pixel text-neon mb-2">7+</div>
             <div className="text-muted-foreground text-sm">Certificates</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold font-pixel text-accent mb-2">4</div>
+            <div className="text-3xl font-bold font-pixel text-accent mb-2">5</div>
             <div className="text-muted-foreground text-sm">Platforms</div>
           </div>
           <div className="text-center">

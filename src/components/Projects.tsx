@@ -1,7 +1,12 @@
-import { ExternalLink, Github, Eye, Code, Smartphone, Database, Globe } from "lucide-react";
+import { ExternalLink, Github, Eye, Code, Smartphone, Database, Globe, Calendar } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import studentSupportImage from "@/assets/student-support-desk.jpg";
+import hospitalManagementImage from "@/assets/hospital-management.jpg";
+import polymartEcoplastImage from "@/assets/polymart-ecoplast.jpg";
+import financeTrackerImage from "@/assets/finance-tracker.jpg";
+import eventManagementImage from "@/assets/event-management.jpg";
 
 const Projects = () => {
   const projects = [
@@ -14,7 +19,8 @@ const Projects = () => {
       icon: <Globe className="h-6 w-6" />,
       color: "neon",
       status: "Completed",
-      image: "/api/placeholder/400/300"
+      image: studentSupportImage,
+      githubLink: "https://github.com/dhanushiatus/University-Student-Support-Desk"
     },
     {
       title: "Hospital Management System", 
@@ -25,7 +31,8 @@ const Projects = () => {
       icon: <Code className="h-6 w-6" />,
       color: "accent",
       status: "Completed",
-      image: "/api/placeholder/400/300"
+      image: hospitalManagementImage,
+      githubLink: "https://github.com/dhanushiatus/User_Registration_Appointment_Booking"
     },
     {
       title: "Polymart Ecoplast System",
@@ -36,7 +43,8 @@ const Projects = () => {
       icon: <Database className="h-6 w-6" />,
       color: "secondary",
       status: "In Progress",
-      image: "/api/placeholder/400/300"
+      image: polymartEcoplastImage,
+      githubLink: "https://github.com/dhanushiatus/PolyMart-EcoPlastMangementSys"
     },
     {
       title: "Personal Finance Tracker",
@@ -47,7 +55,20 @@ const Projects = () => {
       icon: <Smartphone className="h-6 w-6" />,
       color: "neon-green",
       status: "Completed",
-      image: "/api/placeholder/400/300"
+      image: financeTrackerImage,
+      githubLink: "https://github.com/dhanushiatus/Personal_Finance_Tracking_Mobile_App_MoneyMate"
+    },
+    {
+      title: "Event Management App",
+      description: "Comprehensive mobile application for event planning, booking, and management with real-time updates and notifications.",
+      techStack: ["Kotlin", "Android Studio", "Firebase", "Material Design"],
+      features: ["Event Planning", "Booking System", "Real-time Updates", "Push Notifications"],
+      category: "Mobile Development",
+      icon: <Calendar className="h-6 w-6" />,
+      color: "accent",
+      status: "Completed",
+      image: eventManagementImage,
+      githubLink: "https://github.com/dhanushiatus/Event_Management_Mobile_App_Momentous"
     }
   ];
 
@@ -100,7 +121,12 @@ const Projects = () => {
             >
               {/* Project Image */}
               <div className="relative overflow-hidden bg-muted/10 h-48">
-                <div className="absolute inset-0 bg-gradient-to-br from-background/20 to-background/80 flex items-center justify-center">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-background/20 to-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className={`p-4 rounded-full ${getIconStyle(project.color)}`}>
                     {project.icon}
                   </div>
@@ -119,7 +145,12 @@ const Projects = () => {
                     {project.category}
                   </Badge>
                   <div className="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Button size="icon" variant="ghost" className="h-8 w-8">
+                    <Button 
+                      size="icon" 
+                      variant="ghost" 
+                      className="h-8 w-8"
+                      onClick={() => window.open(project.githubLink, '_blank')}
+                    >
                       <Github className="h-4 w-4" />
                     </Button>
                     <Button size="icon" variant="ghost" className="h-8 w-8">
@@ -194,6 +225,7 @@ const Projects = () => {
                     variant="outline" 
                     size="sm" 
                     className="font-pixel flex-1 border-muted-foreground/30 text-muted-foreground hover:bg-muted/10"
+                    onClick={() => window.open(project.githubLink, '_blank')}
                   >
                     <Github className="mr-2 h-4 w-4" />
                     Source Code

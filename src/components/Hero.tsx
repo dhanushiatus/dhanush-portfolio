@@ -91,7 +91,7 @@ const Hero = () => {
 
             <div className="flex items-center space-x-4 animate-fade-in" style={{ animationDelay: '1.4s' }}>
               <a 
-                href="https://linkedin.com/in/jagapathy-dhanushkar" 
+                href="https://www.linkedin.com/in/jagapathy-dhanushkar-1bab77248/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-neon transition-all duration-300 transform hover:scale-110 hover:rotate-6"

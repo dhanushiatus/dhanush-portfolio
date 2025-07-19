@@ -1,6 +1,7 @@
 import { Github, Linkedin, Download, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { generateCV } from "@/utils/cvGenerator";
 
 const Hero = () => {
   const roles = ["Data scientist", "Data analyst", "Android developer"];
@@ -54,7 +55,9 @@ const Hero = () => {
               <h1 className="text-4xl md:text-6xl font-bold animate-fade-in" style={{ animationDelay: '0.6s' }}>
                 <span className="text-foreground transition-all duration-300 hover:text-neon">{"{ "}</span>
                 <span className="text-neon animate-neon-pulse">"_</span>
-                <span className="text-accent-neon transition-all duration-300 hover:scale-105 inline-block">Data Science</span>
+                <span className="text-accent-neon transition-all duration-300 hover:scale-105 inline-block">
+                  Data science <span className="text-sm">undergraduate at sliit</span>
+                </span>
                 <span className="text-neon animate-neon-pulse">" {"}"}</span>
               </h1>
               <h2 className="text-2xl md:text-4xl font-bold animate-fade-in" style={{ animationDelay: '0.8s' }}>
@@ -83,6 +86,7 @@ const Hero = () => {
               <Button 
                 variant="outline" 
                 className="border-accent accent-glow font-pixel transition-all duration-300 hover:scale-105 hover:bg-accent hover:text-accent-foreground transform"
+                onClick={generateCV}
               >
                 <Download className="mr-2 h-4 w-4 transition-transform duration-300 group-hover:translate-y-1" />
                 Download CV

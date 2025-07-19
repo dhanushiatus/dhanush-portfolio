@@ -5,11 +5,67 @@ import { Button } from "@/components/ui/button";
 const Certificates = () => {
   const certificates = [
     {
-      title: "Esoft DiTec",
-      issuer: "Esoft Metro Campus",
-      date: "2023",
-      description: "Diploma in Information Technology covering comprehensive IT fundamentals and practical skills",
-      skills: ["Information Technology", "Programming", "Database Management", "Networking"],
+      title: "Applied Data Science Capstone",
+      issuer: "United Latino Students Association",
+      date: "June 2025",
+      description: "Applied data science techniques through comprehensive capstone project",
+      skills: ["Data Science", "Python", "Machine Learning", "Research"],
+      color: "neon"
+    },
+    {
+      title: "Build a computer vision app with Azure Cognitive Services",
+      issuer: "United Latino Students Association",
+      date: "June 2025",
+      description: "Developed computer vision applications using Azure AI services",
+      skills: ["Computer Vision", "Azure", "AI", "Image Processing"],
+      color: "accent"
+    },
+    {
+      title: "Build a free website with WordPress",
+      issuer: "United Latino Students Association",
+      date: "May 2025",
+      description: "Website development and content management using WordPress",
+      skills: ["WordPress", "Web Development", "CMS", "Website Design"],
+      color: "secondary"
+    },
+    {
+      title: "Getting Started with Microsoft Excel",
+      issuer: "United Latino Students Association",
+      date: "May 2025",
+      description: "Fundamental Excel skills for data management and analysis",
+      skills: ["Excel", "Data Management", "Spreadsheets", "Basic Analytics"],
+      color: "neon-green"
+    },
+    {
+      title: "Google Ads for Beginners",
+      issuer: "United Latino Students Association",
+      date: "May 2025",
+      description: "Digital marketing fundamentals and Google Ads platform mastery",
+      skills: ["Digital Marketing", "Google Ads", "Analytics", "SEM"],
+      color: "accent"
+    },
+    {
+      title: "Introduction to Data Analysis using Microsoft Excel",
+      issuer: "United Latino Students Association",
+      date: "May 2025",
+      description: "Advanced Excel techniques for data analysis and visualization",
+      skills: ["Excel", "Data Analysis", "Data Visualization", "Statistical Analysis"],
+      color: "secondary"
+    },
+    {
+      title: "Business Analysis & Process Management",
+      issuer: "United Latino Students Association",
+      date: "April 2025",
+      description: "Business process optimization and analysis methodologies",
+      skills: ["Business Analysis", "Process Management", "Strategy", "Optimization"],
+      color: "neon-green"
+    },
+    {
+      title: "AI Product Management",
+      issuer: "Duke University",
+      date: "2024",
+      description: "Strategic approach to AI product development and management",
+      skills: ["AI Strategy", "Product Management", "Ethics in AI", "Leadership"],
       color: "neon"
     },
     {
@@ -21,44 +77,12 @@ const Certificates = () => {
       color: "accent"
     },
     {
-      title: "AI Product Management Specialization",
-      issuer: "Duke University",
-      date: "2024",
-      description: "Strategic approach to AI product development and management",
-      skills: ["AI Strategy", "Product Management", "Ethics in AI"],
+      title: "Esoft DiTec",
+      issuer: "Esoft Metro Campus",
+      date: "2023",
+      description: "Diploma in Information Technology covering comprehensive IT fundamentals and practical skills",
+      skills: ["Information Technology", "Programming", "Database Management", "Networking"],
       color: "secondary"
-    },
-    {
-      title: "Fundamentals of Machine Learning and AI",
-      issuer: "Coursera",
-      date: "2023",
-      description: "Core concepts and applications of ML and artificial intelligence",
-      skills: ["Machine Learning", "Neural Networks", "Deep Learning"],
-      color: "neon-green"
-    },
-    {
-      title: "Google Ads for Beginners",
-      issuer: "Google",
-      date: "2023",
-      description: "Digital marketing fundamentals and Google Ads platform mastery",
-      skills: ["Digital Marketing", "Google Ads", "Analytics"],
-      color: "accent"
-    },
-    {
-      title: "Excel for Data Analysis",
-      issuer: "LinkedIn Learning",
-      date: "2023",
-      description: "Advanced Excel techniques for data analysis and visualization",
-      skills: ["Excel", "Data Visualization", "Statistical Analysis"],
-      color: "secondary"
-    },
-    {
-      title: "Project Management with ClickUp",
-      issuer: "ClickUp",
-      date: "2023",
-      description: "Modern project management methodologies and tools",
-      skills: ["Project Management", "Agile", "Team Collaboration"],
-      color: "neon-green"
     }
   ];
 
@@ -166,7 +190,7 @@ const Certificates = () => {
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
-            <div className="text-3xl font-bold font-pixel text-neon mb-2">7+</div>
+            <div className="text-3xl font-bold font-pixel text-neon mb-2">10+</div>
             <div className="text-muted-foreground text-sm">Certificates</div>
           </div>
           <div className="text-center">

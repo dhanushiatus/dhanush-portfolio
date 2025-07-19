@@ -1,7 +1,6 @@
-import { Github, Linkedin, Download, Eye } from "lucide-react";
+import { Github, Linkedin, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { generateCV } from "@/utils/cvGenerator";
 
 const Hero = () => {
   const roles = ["Data scientist", "Data analyst", "Android developer"];
@@ -82,14 +81,6 @@ const Hero = () => {
               >
                 <Eye className="mr-2 h-4 w-4 transition-transform duration-300 group-hover:rotate-12" />
                 View My Work
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-accent accent-glow font-pixel transition-all duration-300 hover:scale-105 hover:bg-accent hover:text-accent-foreground transform"
-                onClick={generateCV}
-              >
-                <Download className="mr-2 h-4 w-4 transition-transform duration-300 group-hover:translate-y-1" />
-                Download CV
               </Button>
             </div>
 

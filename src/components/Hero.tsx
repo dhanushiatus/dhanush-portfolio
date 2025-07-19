@@ -55,7 +55,7 @@ const Hero = () => {
                 <span className="text-foreground transition-all duration-300 hover:text-neon">{"{ "}</span>
                 <span className="text-neon animate-neon-pulse">"_</span>
                 <span className="text-accent-neon transition-all duration-300 hover:scale-105 inline-block">
-                  Data science <span className="text-sm">undergraduate at sliit</span>
+                  Data science <span className="text-sm">Undergraduate at SLIIT</span>
                 </span>
                 <span className="text-neon animate-neon-pulse">" {"}"}</span>
               </h1>
@@ -72,6 +72,12 @@ const Hero = () => {
               Passionate developer focused on building impactful web and mobile applications. 
               Experienced in Data Science, MERN stack, Java, Android, and open-source contributions.
               Currently pursuing BSc in IT specializing in Data Science at SLIIT.
+            </div>
+
+            <div className="animate-fade-in" style={{ animationDelay: '1.1s' }}>
+              <span className="font-pixel text-sm text-accent-neon animate-pulse">
+                // Available For Internship
+              </span>
             </div>
 
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '1.2s' }}>
